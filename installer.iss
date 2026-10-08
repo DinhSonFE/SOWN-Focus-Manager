@@ -5,6 +5,7 @@ AppId={{C8B5BEB9-6759-4808-91FA-A95DCC2C7B90}
 AppName={#AppName}
 AppVersion={#AppVersion}
 AppPublisher=SOWN LIGHTING
+SetupIconFile=assets\app.ico
 DefaultDirName={autopf}\\SOWN Focus Manager
 DefaultGroupName=SOWN LIGHTING
 OutputDir=installer_output
