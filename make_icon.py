@@ -3,7 +3,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 HERE = Path(__file__).resolve().parent
-source = HERE / "assets" / "logo.jpg"
+source = HERE / "assets" / "mark.png"
 dest = HERE / "assets" / "app.ico"
 
 logo = Image.open(source).convert("RGBA")

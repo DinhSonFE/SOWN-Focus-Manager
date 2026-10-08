@@ -67,7 +67,7 @@ class App:
         row=ctk.CTkFrame(body,fg_color="transparent")
         row.pack(fill="x")
         try:
-            pic=Image.open(resource("logo.jpg"))
+            pic=Image.open(resource("mark.png"))
             self.logo=ctk.CTkImage(light_image=pic,dark_image=pic,size=(100,88))
             ctk.CTkLabel(row,text="",image=self.logo,width=100).pack(side="left",padx=(0,15))
         except Exception:
