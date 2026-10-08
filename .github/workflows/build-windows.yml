@@ -23,10 +23,12 @@ jobs:
         run: |
           New-Item -ItemType Directory -Force assets | Out-Null
           Invoke-WebRequest 'https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-Bold.ttf' -OutFile assets/Poppins-Bold.ttf
+      - name: Generate SOWN icon
+        run: python make_icon.py
       - name: Validate Python
         run: python -m compileall -q app.py focus_engine.py
       - name: Build Windows application
-        run: python -m PyInstaller --noconfirm --clean --onefile --windowed --name SOWN_Focus_Manager --add-data "assets;assets" --hidden-import pystray._win32 app.py
+        run: python -m PyInstaller --noconfirm --clean --onefile --windowed --name SOWN_Focus_Manager --add-data "assets;assets" --hidden-import pystray._win32 --icon assets/app.ico app.py
       - name: Install Inno Setup
         shell: pwsh
         run: choco install innosetup --yes --no-progress
